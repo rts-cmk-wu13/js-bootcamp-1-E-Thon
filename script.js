@@ -4,6 +4,10 @@ let quotesElm = document.querySelector("blockquote")
 
 if (quotesElm) {
     let randomIndex = Math.floor(Math.random() * quotes.length);
+    // Math.random() * quotes.length) = tilfældigt tal mellem 1 og 0 gange antallet af elementer i arrayet
+    // Math.floor = afrunder nedad til heltal
+    // da arrayet starter fra 0 til 9, bliver alle 10 muligheder for random visning
+    // fx.: Math.random() = 0.97 => 0.97*10 = 9.7 => svarer til det 10. element i arrayet, da den tæller 0 med
   
     quotesElm.innerHTML = quotes[randomIndex];
 }
